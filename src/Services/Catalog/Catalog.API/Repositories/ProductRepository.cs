@@ -40,7 +40,7 @@ namespace Catalog.API.Repositories
                             .ToListAsync();
         }
 
-        public async Task<IEnumerable<Product>> GetProductByCateory(string categoryName)
+        public async Task<IEnumerable<Product>> GetProductByCategory(string categoryName)
         {
             FilterDefinition<Product> filter = Builders<Product>.Filter.Eq(p => p.Category, categoryName);
 
@@ -76,9 +76,6 @@ namespace Catalog.API.Repositories
             return deleteResult.IsAcknowledged
                 && deleteResult.DeletedCount > 0;
         }
-
-        
-        
 
     }
 }
