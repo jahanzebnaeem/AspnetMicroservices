@@ -8,7 +8,7 @@ services:
     image: redis:alpine
 
   portainer:
-    image: portainer/portainer-ce
+    image: portainer/portainer-ce:latest
 
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
